@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS only -->
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <title>Project 1 | APIs</title>
+</head>
+
+<body class="has-background-grey-light">
+
+  <div class="block">
+    <nav class=" navbar is-warning" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="https://bulma.io">
+          <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item">
+            Home
+          </a>
+
+          <a class="navbar-item">
+            Create
+          </a>
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              Results
+            </a>
+
+            <div class="navbar-dropdown">
+              <a class="navbar-item">
+                Recipe
+              </a>
+              <a class="navbar-item">
+                Beer Pairing
+              </a>
+              <a class="navbar-item">
+                Video
+              </a>
+              <hr class="navbar-divider">
+              <a class="navbar-item">
+                Contact Us
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-primary">
+                <strong>Sign up</strong>
+              </a>
+              <a class="button is-light">
+                Log in
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="hero is-medium is-warning">
+      <div class="hero-body">
+        <p class="title">
+          Primary hero
+        </p>
+        <p class="subtitle">
+          Primary subtitle
+        </p>
+      </div>
+    </section>
+  </div>
+
+<div class="columns">
+  <div class="column">
+    <div class="columns mt-4 mx-1">
+      <div class="column is-12 is-one-half-mobile is-one-third-tablet">
+        <div class="block">
+          <div class="field is-grouped">
+            <div class="control is-expanded">
+              <input class="input" type="text" placeholder="Search for other recipes">
+            </div>
+            <div class="control">
+              <button class="button is-primary"><i class="fas fa-search"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-mobile has-background-black">
+      <div class="mx-1 column is-3 is-4-mobile has-background-white">
+        
+        <div class="table-container">
+          <table class="table is-hoverable">
+            <thead>
+              <tr>
+                <th scope="col">History</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>San Francisco</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+      </div>
+      <div class="mx-1 column is-9 is-4-mobile has-background-white">
+        <div class="columns">
+          <div class="mx-1 column is-8">
+            <div class="columns">
+              <div class="column">
+                <h1>Food Image</h1>
+              </div>
+              <div class="column">
+                <h1>Food Info</h1>
+              </div>
+            </div>
+            <div class="columns">
+              <h1>Cooking Instruction</h1>
+            </div>
+          </div>
+          <div class="mx-1 column is-4">
+            <div class="columns"><h1>Calories and stuff</h1></div>
+            <div class="columns"><h1>Beer pairing</h1></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns has-background-primary">
+      <h1>youtube video</h1>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="api.js"></script>
+</body>
+
+</html>
