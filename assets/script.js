@@ -22,4 +22,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
  }
 });
+// make search button for searching food 
 
+const apiKey =""
+
+document.getElementById("search_btn").addEventListener("click", event =>{
+ event.preventDefault()
+ 
+
+})
