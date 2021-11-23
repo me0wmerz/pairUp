@@ -24,10 +24,12 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 // make search button for searching food 
 
-const apiKey =""
+const apiKey ="721aa72fafd34a0788bd54bc3d53543c"
 
 document.getElementById("search_btn").addEventListener("click", event =>{
  event.preventDefault()
- 
+ const ingreDients = document.getElementsByClassName("ingredients").value
+ axios.get(`https://api.spoonacular.com/food/ingredients/search&applid=${apiKey}`)
+  .then(res => {
 
 })
