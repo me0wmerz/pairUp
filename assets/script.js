@@ -29,7 +29,7 @@ const apiKey ="721aa72fafd34a0788bd54bc3d53543c"
 document.getElementById("search_btn").addEventListener("click", event =>{
  event.preventDefault()
  const ingreDients = document.getElementsByClassName("ingredients").value
- axios.get(`https://api.spoonacular.com/food/ingredients/search&applid=${apiKey}`)
+ axios.get(`https://api.spoonacular.com/recipes/716429/information?apiKey=721aa72fafd34a0788bd54bc3d53543c&includeNutrition=true.`)
   .then(res => {
 
 })
