@@ -1,0 +1,21 @@
+/* body {
+
+} */
+
+
+section {
+   background-image: url("pair_up_image.png");
+}
+
+.container{
+    display:block
+}
+    
+.footer {
+    background-color: #00d1b2;
+    color: #fff;
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:60px;
+}
