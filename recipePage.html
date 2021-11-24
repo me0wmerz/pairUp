@@ -26,7 +26,7 @@
           let foodInfo = res.data[indexRecipe]
           console.log(foodInfo.title)
           console.log(foodInfo.image)
-          for (let indexIngredient = 0, indexIngredient < 7; indexIngredient++) {
+          for (let indexIngredient = 0; indexIngredient < 7; indexIngredient++) {
             console.log(foodInfo.usedIngredients[indexIngredient].originalString)
             console.log(foodInfo.usedIngredients[indexIngredient].image)
             console.log(foodInfo.missedIngredients[indexIngredient].originalString)
@@ -111,14 +111,15 @@
       console.log(drinkList)
 
       drinkList.forEach((cocktailIngredient, i) => {
-        const drinkElem = document.createElement('li')
-        drinkList.className = "cocktailIngredient"
+        console.log(cocktailIngredient)
+        const drinkElem = document.createElement('p')
+        drinkElem.className = "cocktailIngredient"
 
-        if (drinkList.measure) {
+        if (cocktailIngredient.measure) {
           drinkElem.innerHTML = `
-          <h5>${drinkList.measure} ${drinkList.ingredient}</h5>
+          <li>${cocktailIngredient.measure} ${cocktailIngredient.ingredient}</li>
           `
-          document.getElementById(cocktailIngredient).append(drinkElem)
+          document.getElementById("cocktailIngredient").append(drinkElem)
         }
       })
 
