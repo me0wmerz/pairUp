@@ -19,13 +19,21 @@
 
 <script>
  // API for recipes
-    axios.get(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=721aa72fafd34a0788bd54bc3d53543c&ingredients=cheese ,+jalapenos&number=4`)
+    axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=721aa72fafd34a0788bd54bc3d53543c&instructionsRequired=true&addRecipeInformation=true&addRecipeNutrition=true&includeIngredients=cheese,jalapenos&number=2`)
       .then(res => {
         console.log(res)
         for (let indexRecipe = 0; indexRecipe < 9; indexRecipe++) {
-          let foodInfo = res.data[indexRecipe]
+          let foodInfo = res.data.results[indexRecipe]
           console.log(foodInfo.title)
           console.log(foodInfo.image)
+          console.log(foodInfo.summary)
+          console.log(foodInfo.readyInMinutes)
+          console.log(foodInfo.servings)
+          //fix below - need to display all in array
+          console.log(foodInfo.cuisines[0])
+          //fix below - need to display all in array
+          let instructions = console.log(foodInfo.analyzedInstructions[0])
+          console.log(foodInfo.analyzedInstructions[0])
           for (let indexIngredient = 0; indexIngredient < 7; indexIngredient++) {
             console.log(foodInfo.usedIngredients[indexIngredient].originalString)
             console.log(foodInfo.usedIngredients[indexIngredient].image)
@@ -43,17 +51,12 @@
 //  API for cocktails
     axios.get(`https://www.thecocktaildb.com/api/json/v1/1/random.php`)
       .then(res => {
-      console.log(res)
       const drinkInfo = res.data.drinks[0]
-      console.log(drinkInfo.strDrink)
       document.getElementById('drinkName').innerHTML = `
       <h2>${drinkInfo.strDrink}</h2>
       <img src=${drinkInfo.strDrinkThumb} alt=${drinkInfo.strDrink} pic" width="250" >
       `
-      console.log(drinkInfo.strDrinkThumb)
-      // document.getElementById('cocktailIngredient').append = `
-      // <h5>${drinkInfo.strMeasure1} ${drinkInfo.strIngredient1}</h5>
-      // `
+
           
       //setting array of objects for key/value pair since API does not format it in such a way
       let drinkList = [
@@ -108,10 +111,7 @@
         }       
       ]
 
-      console.log(drinkList)
-
       drinkList.forEach((cocktailIngredient, i) => {
-        console.log(cocktailIngredient)
         const drinkElem = document.createElement('p')
         drinkElem.className = "cocktailIngredient"
 
