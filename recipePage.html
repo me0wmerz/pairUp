@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pair Up - Recipes</title>
+</head>
+<body>
+<!-- This is just a placeholder to see the interactions with JavaScript -->
+  <h2 id=drinkName>Cocktail Name</h2>
+  <h4>Cocktail ingredients</h4>
+  <h5 id=cocktailIngredient class=cocktailIngredient>Listed below:</h5>
+  <h5 id=drinkInstructions>Instructions:</h5>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<script>
+ // API for recipes
+    axios.get(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=721aa72fafd34a0788bd54bc3d53543c&ingredients=cheese ,+jalapenos&number=4`)
+      .then(res => {
+        console.log(res)
+        for (let indexRecipe = 0; indexRecipe < 9; indexRecipe++) {
+          let foodInfo = res.data[indexRecipe]
+          console.log(foodInfo.title)
+          console.log(foodInfo.image)
+          for (let indexIngredient = 0, indexIngredient < 7; indexIngredient++) {
+            console.log(foodInfo.usedIngredients[indexIngredient].originalString)
+            console.log(foodInfo.usedIngredients[indexIngredient].image)
+            console.log(foodInfo.missedIngredients[indexIngredient].originalString)
+            console.log(foodInfo.missedIngredients[indexIngredient].image)
+            //missing instructions
+          }
+        }
+      })
+      .catch(err =>
+        console.log(err))
+  // FOR USE LATER -- // document.getElementById('recipe').innerHTML = "No recipe found - please try other ingredients"   
+
+
+//  API for cocktails
+    axios.get(`https://www.thecocktaildb.com/api/json/v1/1/random.php`)
+      .then(res => {
+      console.log(res)
+      const drinkInfo = res.data.drinks[0]
+      console.log(drinkInfo.strDrink)
+      document.getElementById('drinkName').innerHTML = `
+      <h2>${drinkInfo.strDrink}</h2>
+      <img src=${drinkInfo.strDrinkThumb} alt=${drinkInfo.strDrink} pic" width="250" >
+      `
+      console.log(drinkInfo.strDrinkThumb)
+      // document.getElementById('cocktailIngredient').append = `
+      // <h5>${drinkInfo.strMeasure1} ${drinkInfo.strIngredient1}</h5>
+      // `
+          
+      //setting array of objects for key/value pair since API does not format it in such a way
+      let drinkList = [
+        {measure: drinkInfo.strMeasure1,
+        ingredient: drinkInfo.strIngredient1
+        },
+        {measure: drinkInfo.strMeasure2,
+        ingredient: drinkInfo.strIngredient2
+        },
+        {measure: drinkInfo.strMeasure3,
+        ingredient: drinkInfo.strIngredient3
+        },
+        {measure: drinkInfo.strMeasure3,
+        ingredient: drinkInfo.strIngredient3
+        },
+        {measure: drinkInfo.strMeasure4,
+        ingredient: drinkInfo.strIngredient4
+        },
+        {measure: drinkInfo.strMeasure5,
+        ingredient: drinkInfo.strIngredient5
+        },
+        {measure: drinkInfo.strMeasure6,
+        ingredient: drinkInfo.strIngredient6
+        },
+        {measure: drinkInfo.strMeasure7,
+        ingredient: drinkInfo.strIngredient7
+        },
+        {measure: drinkInfo.strMeasure8,
+        ingredient: drinkInfo.strIngredient8
+        },
+        {measure: drinkInfo.strMeasure9,
+        ingredient: drinkInfo.strIngredient9
+        },
+        {measure: drinkInfo.strMeasure10,
+        ingredient: drinkInfo.strIngredient10
+        },
+        {measure: drinkInfo.strMeasure11,
+        ingredient: drinkInfo.strIngredient11
+        },
+        {measure: drinkInfo.strMeasure12,
+        ingredient: drinkInfo.strIngredient12
+        },
+        {measure: drinkInfo.strMeasure13,
+        ingredient: drinkInfo.strIngredient13
+        },
+        {
+          measure: drinkInfo.strMeasure14,
+          ingredient: drinkInfo.strIngredient14
+        },
+        {measure: drinkInfo.strMeasure15,
+        ingredient: drinkInfo.strIngredient15
+        }       
+      ]
+
+      console.log(drinkList)
+
+      drinkList.forEach((cocktailIngredient, i) => {
+        const drinkElem = document.createElement('li')
+        drinkList.className = "cocktailIngredient"
+
+        if (drinkList.measure) {
+          drinkElem.innerHTML = `
+          <h5>${drinkList.measure} ${drinkList.ingredient}</h5>
+          `
+          document.getElementById(cocktailIngredient).append(drinkElem)
+        }
+      })
+
+   
+
+
+      // console.log(ingredientList)
+      //document.getElementById('')
+
+      //function for adding ingredients #1-#15
+      // let renderCocktailIngredients = () => {
+      //   //set i to 1 because strIngredient and strMeasure begin at 1 instead of 0
+      //   for (let i = 1; i < 18; i++) {
+      //     if (drinkInfo.strIngredient${i}) {
+      //       console.log(drinkInfo.strIngredient${i})
+      //       console.log(drinkInfo.strMeasure${i})
+      //     document.getElementById('cocktailIngredient').append = `
+      //     <h5>${strMeasure${i}.value} ${strIngredient${i}.value}</h5>
+      //     `
+      //     }
+        // else {
+        //   dont need an else statement, right?
+        // //   }
+        // }
+      // }
+      //run function to render all measurements/ingredients (up to 17)
+      // renderCocktailIngredients()
+
+      //set inner HTML to the instructions given on drink API
+
+      console.log(drinkInfo.strInstructions)
+      document.getElementById('drinkInstructions').innerHTML = `
+      <h4>${drinkInfo.strInstructions}</h4>
+      `
+        })
+      .catch(err =>
+        console.log(err))
+
+// const options = {
+//     method: 'GET',
+//     url: 'https://food-calorie-data-search.p.rapidapi.com/api/search',
+//     params: { keyword: `${foodItem}` },
+//     headers: {
+//       'x-rapidapi-key': 'e867de6562mshdf4837fcdae9882p1cb737jsn366b080e13f2',
+//       'x-rapidapi-host': 'food-calorie-data-search.p.rapidapi.com'
+//     }
+//   };
+
+//   axios.request(options).then(function (response) {
+//     console.log(response.data);
+//   }).catch(function (error) {
+//     console.error(error);
+//   });
+  </script>
+</body>
+</html>
