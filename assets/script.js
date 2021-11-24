@@ -33,9 +33,25 @@ document.getElementById("btn").addEventListener("click", event =>{
  const ingredientsEl = document.getElementById("ingredients").value
   axios.get(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${apiKey}&ingredients=${ingredientsEl}&number=4`)
   .then(res => {  
-   console.log(apiKey)
-   console.log(res)
- 
+    // console.log(res)
+    for (let i = 0; i < 4; i++) {
+      let foodInfo = res.data[i]
+      // console.log(foodInfo.title)
+      // console.log(foodInfo.image)
+
+
+      document.getElementById('title-1').innerHTML = `
+        <h5> ${foodInfo.title} </h5>
+      
+      `  
+      document.getElementById('image-1').innerHTML=`
+        <img src="${foodInfo.image}" alt="${foodInfo.title}">
+
+      `
+       
+    
+      
+    }
 })
 
   .catch(err => console.log(err))
