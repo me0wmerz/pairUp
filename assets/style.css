@@ -46,21 +46,18 @@
  color: #6fc27c;
 }
 
-.inputBar {
+.input {
  border: 2px solid #0f4d19;
  font-family: 'Raleway', sans-serif;
  font-weight: bold;
- top: 355px;
- left: 575px;
+ width: 18rem;
 }
 
-.search_btn {
+.button {
  border: 2px solid #0f4d19;
  background-color: white;
- top: 355px;
- left: 575px;
  font-family: 'Raleway', sans-serif;
  font-weight: bold;
- 
+ width:4rem;
 
 }

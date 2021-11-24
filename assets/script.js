@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
 
  // Get all "navbar-burger" elements
@@ -22,14 +23,20 @@ document.addEventListener('DOMContentLoaded', () => {
   });
  }
 });
+
 // make search button for searching food 
-
 const apiKey ="721aa72fafd34a0788bd54bc3d53543c"
+              
 
-document.getElementById("search_btn").addEventListener("click", event =>{
+document.getElementById("btn").addEventListener("click", event =>{
  event.preventDefault()
- const ingreDients = document.getElementsByClassName("ingredients").value
- axios.get(`https://api.spoonacular.com/recipes/716429/information?apiKey=721aa72fafd34a0788bd54bc3d53543c&includeNutrition=true.`)
-  .then(res => {
+ const ingredientsEl = document.getElementById("ingredients").value
+  axios.get(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${apiKey}&ingredients=${ingredientsEl}&number=4`)
+  .then(res => {  
+   console.log(apiKey)
+   console.log(res)
+ 
+})
 
+  .catch(err => console.log(err))
 })
