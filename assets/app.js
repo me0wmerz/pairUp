@@ -1,3 +1,20 @@
+
+
+//
+
+drinkList.forEach((cocktailIngredient, i) => {
+  const drinkElem = document.createElement('p')
+  drinkElem.className = "cocktailIngredient"
+
+  if (cocktailIngredient.measure) {
+    drinkElem.innerHTML = `
+          <li>${cocktailIngredient.measure} ${cocktailIngredient.ingredient}</li>
+          `
+    document.getElementById("cocktailIngredient").append(drinkElem)
+  }
+})
+
+
 //API for recipes
 
 //API for calories

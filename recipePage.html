@@ -19,7 +19,7 @@
 
 <script>
  // API for recipes
-    axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=721aa72fafd34a0788bd54bc3d53543c&instructionsRequired=true&addRecipeInformation=true&addRecipeNutrition=true&includeIngredients=cheese,jalapenos&number=2`)
+    axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=721aa72fafd34a0788bd54bc3d53543c&instructionsRequired=true&addRecipeInformation=true&addRecipeNutrition=true&includeIngredients=potato,cheese,jalapenos&number=10`)
       .then(res => {
         console.log(res)
         for (let indexRecipe = 0; indexRecipe < 9; indexRecipe++) {
@@ -29,18 +29,25 @@
           console.log(foodInfo.summary)
           console.log(foodInfo.readyInMinutes)
           console.log(foodInfo.servings)
-          //fix below - need to display all in array
-          console.log(foodInfo.cuisines[0])
-          //fix below - need to display all in array
-          let instructions = console.log(foodInfo.analyzedInstructions[0])
-          console.log(foodInfo.analyzedInstructions[0])
-          for (let indexIngredient = 0; indexIngredient < 7; indexIngredient++) {
-            console.log(foodInfo.usedIngredients[indexIngredient].originalString)
-            console.log(foodInfo.usedIngredients[indexIngredient].image)
-            console.log(foodInfo.missedIngredients[indexIngredient].originalString)
-            console.log(foodInfo.missedIngredients[indexIngredient].image)
-            //missing instructions
-          }
+          //displays all cuisine types in array (below)
+          let cuisineTypes = foodInfo.cuisines.join(", ")
+          //displays all steps in cooking instructions (below)
+          let totalStepInstructions = ""
+          let instructions = foodInfo.analyzedInstructions[0].steps
+          instructions.forEach ((instructionSteps) => {
+            totalStepInstructions += instructionSteps.step
+          })
+          console.log("ping" + totalStepInstructions)
+
+          //for loop to retrieve all ingredients
+          let ingredientInfo = foodInfo.nutrition.ingredients
+
+          let ingredientList = []
+          ingredientInfo.forEach((ingredientDetails) => {
+            ingredientList.push(ingredientDetails.amount + " " + ingredientDetails.name)
+            
+          })
+          console.log("ping" + ingredientList)
         }
       })
       .catch(err =>
@@ -51,6 +58,7 @@
 //  API for cocktails
     axios.get(`https://www.thecocktaildb.com/api/json/v1/1/random.php`)
       .then(res => {
+      console.log(res)
       const drinkInfo = res.data.drinks[0]
       document.getElementById('drinkName').innerHTML = `
       <h2>${drinkInfo.strDrink}</h2>
