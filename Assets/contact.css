@@ -34,8 +34,12 @@ header {
 }
 
 h1 {
-    font-style: normal #fff !important;
-    fill: white;
+    color: white !important;
+}
+
+
+h2 {
+    color: white !important;
 }
 
 .notification {
