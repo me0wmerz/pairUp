@@ -29,13 +29,16 @@ const apiKey ="721aa72fafd34a0788bd54bc3d53543c"
               
 const inputs = document.querySelectorAll('input')
 
+
+
 document.getElementById("btn").addEventListener("click", event =>{
  event.preventDefault()
  const ingredientsEl = document.getElementById("ingredients").value
-  axios.get(` https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&instructionsRequired=true&addRecipeInformation=true&addRecipeNutrition=true&includeIngredients=${ingredients}&number=4`)
+ 
+  axios.get(` https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&instructionsRequired=true&addRecipeInformation=true&addRecipeNutrition=true&includeIngredients=${ingredients}&number=6`)
   .then(res => {  
     console.log(res)
-    for (let indexRecipe = 0; indexRecipe < 4; indexRecipe++) {
+    for (let indexRecipe = 0; indexRecipe < 6; indexRecipe++) {
       let foodInfo = res.data.results[indexRecipe]
       console.log(foodInfo.title)
       console.log(foodInfo.image)
@@ -43,33 +46,22 @@ document.getElementById("btn").addEventListener("click", event =>{
       const foodnameElem = document.createElement("div")
       foodnameElem.className = "title-1"
       if (foodInfo.title){
+
         foodnameElem.innerHTML=`
           <div class="card" >
           <h3>${foodInfo.title}</h3>
           <img src="${foodInfo.image}" alt="${foodInfo.title}">
           </div>
-          <div class="food-name" id="title-1">  </div>
+          <div class="food-name" id="title-1"> </div>
         </div>
+          <button class="button is-warning is-light" href=""> Click Me </button>
+          
         `
         document.getElementById("food-info").append(foodnameElem)
         // document.getElementById("image-1").append(foodnameElem)
+       
       }
 
-      // console.log(foodInfo.summary)
-      // console.log(foodInfo.readyInMinutes)
-      // console.log(foodInfo.servings)
-      // //fix below - need to display all in array
-      // console.log(foodInfo.cuisines[0])
-      // //fix below - need to display all in array
-      // let instructions = console.log(foodInfo.analyzedInstructions[0])
-      // console.log(foodInfo.analyzedInstructions[0])
-      // for (let indexIngredient = 0; indexIngredient < 4; indexIngredient++) {
-      //   console.log(foodInfo.usedIngredients[indexIngredient].originalString)
-      //   console.log(foodInfo.usedIngredients[indexIngredient].image)
-      //   console.log(foodInfo.missedIngredients[indexIngredient].originalString)
-      //   console.log(foodInfo.missedIngredients[indexIngredient].image)
-      //   //missing instructions
-      // }
     }
   })
     .catch(err =>
