@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // make search button for searching food 
 const apiKey ="721aa72fafd34a0788bd54bc3d53543c"
               
+const inputs = document.querySelectorAll('input')
 
 document.getElementById("btn").addEventListener("click", event =>{
  event.preventDefault()
@@ -38,16 +39,20 @@ document.getElementById("btn").addEventListener("click", event =>{
       let foodInfo = res.data.results[indexRecipe]
       console.log(foodInfo.title)
       console.log(foodInfo.image)
+      
       const foodnameElem = document.createElement("div")
       foodnameElem.className = "title-1"
       if (foodInfo.title){
         foodnameElem.innerHTML=`
-        <h3>${foodInfo.title}</h3>
-        <img src="${foodInfo.image}" alt="${foodInfo.title}">
-        
+          <div class="card" >
+          <h3>${foodInfo.title}</h3>
+          <img src="${foodInfo.image}" alt="${foodInfo.title}">
+          </div>
+          <div class="food-name" id="title-1">  </div>
+        </div>
         `
-        document.getElementById("title-1").append(foodnameElem)
-        document.getElementById("image-1").append(foodnameElem)
+        document.getElementById("food-info").append(foodnameElem)
+        // document.getElementById("image-1").append(foodnameElem)
       }
 
       // console.log(foodInfo.summary)

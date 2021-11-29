@@ -61,3 +61,8 @@
  width:4rem;
 
 }
+
+.block {
+ display: flex;
+ flex-direction: row;
+}
