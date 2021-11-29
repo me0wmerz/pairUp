@@ -89,7 +89,7 @@
 <!-- history tab with a nice card border -->
           <div class="card">
             <div class="table-container">
-              <table class="table is-hoverable">
+              <table class="table is-hoverable ">
                 <thead>
                   <tr>
                     <th>
@@ -99,10 +99,10 @@
                   </tr>
                 </thead>
                 <!-- To make new Suggestions -->
-                <tbody>
+                <tbody >
                   <tr>
                     <td>
-                      <button class="button is-white">
+                      <button class="button is-white ">
                         Steak Fries
                       </button>
                     </td>
@@ -232,6 +232,7 @@
                 </div>
               </div>
             </div>
+<!-- Calories and drink -->
             <div class="mx-1 column is-4">
               <div class="columns card">
                 <div class="p-4">
@@ -244,16 +245,15 @@
                   <p> Cholesterol 0 mg 0%</p>
                   <p> Sodium 246 mg 10%</p>
                   <p> Potassium 677 mg 19%</p>
-
                 </div>
-
               </div>
-              <div class="columns">
+<!-- drink tab -->
+              <div class="columns mr-4">
                 <div class="tile is-child">
                   <div class="card mt-4">
                     <div class="card-image">
-                      <figure class="image is-4by3">
-                        <img
+                      <figure class="image is-4by3" id="drinkImg">
+<!-- drink img -->      <img
                           src="https://images.unsplash.com/photo-1544145945-f90425340c7e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80g"
                           alt="Drinks">
                       </figure>
@@ -263,17 +263,17 @@
                         <div class="media-left">
                         </div>
                         <div class="media-content">
-                          <p class="title is-4">Random Drink: </p>
-                          <p class="subtitle is-6">Margraita </p>
+                          <p class="subtitle is-6">Complimentary Drink: </p>
+                          <p class="title is-4" id="drinkName">Margraita </p>
+                          <div class="content" id="instructions">
+                            A margarita is a cocktail consisting of tequila, orange liqueur, and lime juice often served
+                            with salt on
+                            the rim of the
+                            glass. The drink is served shaken with ice, blended with ice, or without ice.
+                          </div>
                         </div>
                       </div>
 
-                      <div class="content">
-                        A margarita is a cocktail consisting of tequila, orange liqueur, and lime juice often served
-                        with salt on
-                        the rim of the
-                        glass. The drink is served shaken with ice, blended with ice, or without ice.
-                      </div>
                       <button class="button is-primary is-rounded "> Save </button>
                     </div>
                   </div>
@@ -289,7 +289,8 @@
     </div>
   </div>
 
-
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="drinks.js"></script>
 </body>
 
 </html>
