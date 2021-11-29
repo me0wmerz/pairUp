@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Pair Up Home Page</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
@@ -111,8 +111,7 @@
   <div class="column is-three-fifths">
     <div class="card media">
       <div class="card-image media-left">
-        <figure class="image is-32by32">
-          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80" alt="RecipieImg">
+        <figure id="foodPic" class="image is-32by32">
         </figure>
       </div>
     </div>
@@ -120,7 +119,7 @@
       <div class="card-content">
         <div class="content">
           <h3 id=mainFoodName>
-            Steak Fries
+            Placeholder
           </h3>
           <h3 id=mainFoodInstructions>
             Instructions:
@@ -184,7 +183,7 @@
                     <tbody>
                       <tr>
                         <td>
-                          <i class="fas fa-utensils"></i> 
+                          <i id="calories" class="fas fa-utensils"></i> 
                           Calories:
                         </td>
                       </tr>
@@ -193,15 +192,15 @@
                     <tbody>
                       <tr>
                         <td>
-                          <i class="fas fa-drumstick-bite"></i>
-                          Protien: 
+                          <i id="protein" class="fas fa-drumstick-bite"></i>
+                          Protein: 
                         </td>
                       </tr>
                     </tbody>
                     <tbody>
                       <tr>
                         <td>
-                          <i class="fas fa-bread-slice"></i>
+                          <i id="carbs" class="fas fa-bread-slice"></i>
                          Carbs:
                         </td>
                       </tr>
@@ -248,5 +247,6 @@
   </div>
 
 </div>
+<script src="./assets/app.js"></script>
 </body>
 </html>
