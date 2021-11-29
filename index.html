@@ -1,109 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pair Up</title>
-  <link ref="stylesheet" type="text/css" href="assets/reset.css">
-  <link ref="stylesheet" type="text/css" href="assets/savedStyle.css">
+  <link rel="stylesheet" href="assets/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Open+Sans:ital,wght@1,300&family=Raleway:wght@300&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
 </head>
+
 <body>
+  <section class="hero  is-fullheight">
+    <!-- Hero head: will stick at the top -->
+    <div class="hero-head">
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar-brand">
+            <a class="navbar-item">
+              <img src="assets/img/Pair_Up_Icon.png" alt="#" class="pairUpicon">
+            </a>
+            <span class="navbar-burger" data-target="navbarMenuHeroA">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+          <div id="navbarMenuHeroA" class="navbar-menu">
+            <div class="navbar-end">
+              <a class="navbar-item is-active" aria-current="page" href="./index.html">
+                Home
+              </a>
+              <!-- <a class="navbar-item" href="">
+                Examples
+              </a> -->
+              <a class="navbar-item" href="">
+                Saved Recipe
+              </a>
+              <a class="navbar-item" href="./abehenry.html">
+                Recipie
+              </a>
+             
+             <a class="navbar-item" href="">
+                Contact Us
+              </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
 
-  <button id="search">Search</button>
+    <!-- Hero content: will be in the middle -->
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <p class="title">
+          PAIR UP
+        </p>
+        <br><br>
+        <p class="subtitle">
+          The Virtual CookBook For Whatever's In Your Fridge!
+        </p>
+        <br><br>
 
+        <input class="input" placeholder="Search Ingredients Exampe : Apple" type="text" id="ingredients">
+        <button class="button" id="btn">Search</button>
+
+      </div>
+    </div>
+
+    <!-- Hero footer: will stick at the bottom -->
+    <div class="block hide" id="card">
+      <div class="columns" id="food-info">
+        <!-- <div class="card" id="card-1">
+          <div id = "image-1">  
+            <img src="" alt="">
+          </div>
+          <div class="food-name" id="title-1">  </div>
+        </div> -->
+        <!-- <div class="card" id="card-1">
+          <div id="image-2">
+            <img src="" alt="">
+          </div>
+          <div class="food-name" id="title-2"> </div>
+        </div>
+        <div class="card" id="card-1">
+          <div id="image-3">
+            <img src="" alt="">
+          </div>
+          <div class="food-name" id="title-3">  </div>
+        </div>
+        <div class="card" id="card-1">
+          <div id="image-4">
+            <img src="" alt="">
+          </div>
+          <div class="food-name" id="title-4">  </div>
+        </div> -->
+      </div>
+    </div>
+
+  </section>
+  <script src="assets/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-  
-
-  <script>
-
-  </script>
-  <script src="assets/app.js"></script>
-
- <meta charset="UTF-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Pair Up</title>
- <link rel="stylesheet" href="assets/style.css">
- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-</head>
-<body>
-<section class="hero is-primary is-medium">
- <!-- Hero head: will stick at the top -->
- <div class="hero-head">
-  <nav class="navbar">
-   <div class="container">
-    <div class="navbar-brand">
-     <a class="navbar-item">
-      <img src="assets/img/foodimg#1.jpg" alt="our image">
-     </a>
-     <span class="navbar-burger" data-target="navbarMenuHeroA">
-      <span></span>
-      <span></span>
-      <span></span> 
-     </span>
-    </div>
-    <div id="navbarMenuHeroA" class="navbar-menu">
-     <div class="navbar-end">
-      <a class="navbar-item is-active">
-       Home
-      </a>
-      <a class="navbar-item">
-       Examples
-      </a>
-      <a class="navbar-item">
-       Saved Recipe
-      </a>
-      <a class="navbar-item">
-       Results
-      </a>
-      <a class="navbar-item">
-       Contact Us
-      </a>
-      </span>
-     </div>
-    </div>
-   </div>
-  </nav>
- </div>
-
- <!-- Hero content: will be in the middle -->
- <div class="hero-body">
-  <div class="container has-text-centered">
-   <p class="title">
-    PAIR UP
-   </p>
-   <p class="subtitle">
-    The Virtual CookBook For Whatever's In Your Fridge!
-   </p>
-   <input class="ingredients" placeholder="search for the items" type="text" name=" ingredients">
-   <button class="Search_btn" id ="search-btn">Search</button>
-    </a>
-  </div>
- </div>
-
- <!-- Hero footer: will stick at the bottom -->
- <!-- <div class="hero-foot">
-  <nav class="tabs">
-   <div class="container">
-    <ul>
-     <li class="is-active"><a>Overview</a></li>
-     <li><a>Modifiers</a></li>
-     <li><a>Grid</a></li>
-     <li><a>Elements</a></li>
-     <li><a>Components</a></li>
-     <li><a>Layout</a></li>
-    </ul>
-   </div>
-  </nav>
- </div> -->
-</section>
 
 
   <!-- To be added
   <a href="contact page link">Contact Us</a> -->
 </body>
+
 </html>
