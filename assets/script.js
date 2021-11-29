@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // make search button for searching food 
-const apiKey ="721aa72fafd34a0788bd54bc3d53543c"
+const apiKey ="3f5180d6774b495eb794eb02a08d8db6"
               
 const inputs = document.querySelectorAll('input')
 
@@ -33,9 +33,11 @@ const inputs = document.querySelectorAll('input')
 
 document.getElementById("btn").addEventListener("click", event =>{
  event.preventDefault()
+ document.getElementById("food-info").innerHTML = ""
+
  const ingredientsEl = document.getElementById("ingredients").value
  
-  axios.get(` https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&instructionsRequired=true&addRecipeInformation=true&addRecipeNutrition=true&includeIngredients=${ingredients}&number=6`)
+  axios.get(` https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&instructionsRequired=true&addRecipeInformation=true&addRecipeNutrition=true&includeIngredients=${ingredientsEl}&number=6`)
   .then(res => {  
     console.log(res)
     for (let indexRecipe = 0; indexRecipe < 6; indexRecipe++) {
@@ -64,8 +66,10 @@ document.getElementById("btn").addEventListener("click", event =>{
       }
 
     }
+    document.getElementById("ingredients").value = ""
   })
     .catch(err =>
       console.log(err))
-   
+
+
 })
