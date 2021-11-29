@@ -12,9 +12,11 @@
   <link rel="stylesheet" href="./savedStyle.css">
 
 </head>
-<body>
+<body >
 
-  <section class="hero is-fullheight"> 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <section class="hero is-fullheight "> 
     <!-- Hero head: will stick at the top -->
     <div class="hero-head">
       <header class="navbar">
@@ -51,14 +53,14 @@
    
       <div class="container has-text-centered">
         <p class="title">
-         Your Saved Recipies
+         Your Saved Recipes
         </p>
         <p class="subtitle">
-          Check out all the saved recipies you haved added to your collection below.  Feel free to rank them 1 out 5 stars to set which appear first in the list!
+          Check out all the saved recipes you haved added to your collection below.  Feel free to rank them 1 out 5 stars to set which appear first in the list!
         </p>
 
 
-
+<ul id="saved" class="list-group">
       <!-- Saved Recipies -->
     <div class="hero-body">
       <div class="box">
@@ -81,27 +83,20 @@
                         little as you want! But we always load our chicken fajita burrito bowl with:
                         </p>
     
-                        <button class="button is-primary is-rounded ">Recipie Link</button>
-                        <button class="button is-success is-rounded ">Youtube Link</button>
-                        <button class="button is-danger is-rounded mr-6">Remove Recipie</button>
-              
-              <!-- Ratings of 1 - 5 Stars -->
-                        <span>
-                          <i class="fas fa-star is-right has-text-warning pl-6 px-1 "></i>
-                            <i class="fas fa-star is-right has-text-warning mr-1 px-1"></i>
-                            <i class="fas fa-star is-right has-text-warning mr-1 px-1"></i>
-                            <i class="fas fa-star is-right has-text-warning mr-1 px-1"></i>
-                            <i class="fas fa-star is-right has-text-warning mr-1 px-1"></i>
-                        </span>
+                        <button class="button is-primary is-rounded ">Recipe Link</button>
+                        <button class="button is-danger is-rounded mr-6 " id="remove">Remove Recipe</button>
                       </div>
               </div>
           </div>
       </div>
+
+
+
   </div>
 
+  </ul>
 
-
-
+<script src="./savedRecipie.js"></script>
 
 
   
