@@ -54,7 +54,8 @@ document.getElementById("btn").addEventListener("click", event =>{
           </div>
           <div class="food-name" id="title-1"> </div>
         </div>
-          <button class="button is-warning is-light" href=""> Click Me </button>
+          <button class="button is-warning is-light" > <a href="./abehenry.html"> Click me </a> </button>
+
           
         `
         document.getElementById("food-info").append(foodnameElem)
