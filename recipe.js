@@ -25,10 +25,14 @@ document.getElementById("search").addEventListener("click", event => {
         //displays all cuisine types in array (below)
         //let cuisineTypes = foodInfo.cuisines.join(", ")
 
+        //localStorage.setItem('foodName', JSON.stringify(items))
+
         document.getElementById('foodName').innerHTML = `
-              <h2>${foodInfo.title}</h2>
+              <h2 id="foodTitle">${foodInfo.title}</h2>
+              <button id="foodSave" class="button is-primary is-rounded " data-title="${foodInfo.title}" data-source="${foodInfo.spoonacularSourceUrl}"> Save </button>
               <br>
               `
+
         document.getElementById('foodPic').innerHTML = `
               <img src=${foodInfo.image} alt=${foodInfo.title} picture" width="350">
               <br>
@@ -102,8 +106,54 @@ document.getElementById("search").addEventListener("click", event => {
           `
       }
 
+      // document.getElementById("foodSave").addEventListener("click", event => {
+      //   event.preventDefault()
+
+
+      //   // let savedItems = ""
+      //   // savedItems = foodInfo.title
+      //   // console.log(savedItems)
+      //   console.log(foodTitle)
+
+
+      // })
+
     })
     .catch(err => {
       console.log(err)
     })
 })
+
+
+
+
+
+// THIS IS TESTING BELOW
+
+//const savedRecipes = []
+
+// document.getElementById("foodSave").addEventListener("click", event => {
+//   event.preventDefault()
+
+
+//       let savedItems = ""
+//       savedItems = foodInfo.title
+//       console.log(savedItems)
+
+
+// })
+
+document.addEventListener('click', event => {
+  if (event.target.id === 'foodSave') {
+    console.log(event.target.dataset)
+    let food = JSON.parse(localStorage.getItem("food")) || []
+    food.push({
+      title: event.target.dataset.title,
+      source: event.target.dataset.source
+    })
+    localStorage.setItem("food", JSON.stringify(food))
+  }
+})
+
+
+
