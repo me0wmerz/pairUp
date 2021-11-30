@@ -6,10 +6,17 @@ body {
 
 
 section {
+<<<<<<< HEAD
     background-image: url("acai_bowl2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     object-fit: fill;
+=======
+   background-image: url("img/acai_bowl.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   object-fit: fill;
+>>>>>>> 89ad23c163cd1978389ab8160ceabd8ecd8d24af
 }
 
 .container {
