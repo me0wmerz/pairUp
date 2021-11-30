@@ -1,27 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
-
-body {
-    font-family: 'Didact Gothic', sans-serif;
-}
-
 
 section {
-    background-image: url("acai_bowl2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    object-fit: fill;
-   background-image: url("img/acai_bowl.jpg");
-   background-repeat: no-repeat;
-   background-size: cover;
-   object-fit: fill;
-}
-
-/* section {
     background-image: url("https://images.unsplash.com/photo-1573574635896-36753f4e38bf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80");
     background-repeat: no-repeat;
     background-size: cover;
     object-fit: fill;
-} */
+}
 
 .container {
     display: block
@@ -59,11 +42,6 @@ h2 {
     font-size: 20px;
 }
 
-.card-content {
-    min-width: fit-content;
-    overflow-y: auto;
-}
-    /* overflow-x: hidden; */
-/* .hero-head {
+.hero-head {
     font-family: 'Raleway', sans-serif;
-} */
+}
