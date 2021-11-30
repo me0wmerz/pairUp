@@ -37,7 +37,7 @@
     let userIngredients
  
  
-    axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=721aa72fafd34a0788bd54bc3d53543c&instructionsRequired=true&addRecipeInformation=true&addRecipeNutrition=true&includeIngredients=${userIngredients}=10`)
+    axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=3f5180d6774b495eb794eb02a08d8db6&instructionsRequired=true&addRecipeInformation=true&addRecipeNutrition=true&includeIngredients=${userIngredients}=10`)
       .then(res => {
         console.log(res)
         for (let indexRecipe = 0; indexRecipe < 9; indexRecipe++) {
@@ -70,13 +70,13 @@
 
           let ingredientList = []
           ingredientInfo.forEach((ingredientDetails) => {
-            ingredientList.push(" " + ingredientDetails.amount + " " + ingredientDetails.name)
+            ingredientList.push(" " + ingredientDetails.amount + " " + ingredientDetails.unit + " " + ingredientDetails.name)
             
           })
           console.log(ingredientList)
           //setting inner HTML for ingredients
           document.getElementById("foodIngredient").innerHTML = `
-          <h4>${ingredientList}</h4>
+          <ul>${ingredientList}</ul>
           `
           document.getElementById('foodIngredient').value = ''
 
