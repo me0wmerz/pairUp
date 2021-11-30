@@ -155,5 +155,24 @@ document.addEventListener('click', event => {
   }
 })
 
+let savedFoods = []
+
+savedFoods = localStorage.getItem("food", JSON.stringify(food))
+console.log(food[0].title)
+
+document.getElementById('savedFoods').innerHTML = `
+  <div class="media-content ">
+    <div class="content" style="align-content: center;">
+      <p>
+      <strong>${food.title} </strong>
+      <br>
+      <br>
+      </p>
+    <button class="button is-primary is-rounded href="${food.source}">Recipe Link</button>
+    <button class="button is-danger is-rounded mr-6 " id="remove">Remove Recipe</button>
+    </div>
+  </div>
+`
+
 
 

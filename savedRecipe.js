@@ -1,6 +1,6 @@
 let savedFoods = []
 
-savedFoods = localStorage.getItem("food")
+savedFoods = localStorage.getItem("food", JSON.stringify(food))
 console.log(food[0].title)
 
 document.getElementById('savedFoods').innerHTML = `
@@ -16,7 +16,7 @@ document.getElementById('savedFoods').innerHTML = `
     </div>
   </div>
 `
-  ** must stringify plz
+// ** must stringify plz
 
 // window.localStorage.getItem('user');
 // JSON.parse(window.localStorage.getItem('user'))
