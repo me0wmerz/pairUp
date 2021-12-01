@@ -1,0 +1,17 @@
+body {
+  background-image: url(https://images.unsplash.com/photo-1543353071-873f17a7a088?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+}
+
+
+
+.navbar-item {
+  color: #555B6E;
+}
+
+.hero-head {
+  font-family: 'Raleway', sans-serif;
+}
