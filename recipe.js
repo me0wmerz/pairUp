@@ -157,16 +157,14 @@ document.addEventListener('click', event => {
       foodElem.innerHTML = `
       <a href="${food.source}">${food.title}</a>
       `
-      document.getElementById("foodExample").append(foodElem)
     })
     
   }
   
 })
 
-let savedFoods = []
 
-savedFoods = localStorage.getItem("food", JSON.stringify(food))
+let savedFoods = localStorage.getItem("food")
 console.log(food[0].title)
 
 document.getElementById('savedFoods').innerHTML = `
