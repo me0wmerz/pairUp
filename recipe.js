@@ -152,7 +152,16 @@ document.addEventListener('click', event => {
       source: event.target.dataset.source
     })
     localStorage.setItem("food", JSON.stringify(food))
+    food.forEach(food => {
+      let foodElem = document.createElement('li')
+      foodElem.innerHTML = `
+      <a href="${food.source}">${food.title}</a>
+      `
+      document.getElementById("foodExample").append(foodElem)
+    })
+    
   }
+  
 })
 
 let savedFoods = []
@@ -173,6 +182,12 @@ document.getElementById('savedFoods').innerHTML = `
     </div>
   </div>
 `
-
+// food.forEach(food => {
+//   let foodElem = document.createElement('li')
+//   foodElem.innerHTML = `
+//   <a href="${food.source}">${food.title}</a>
+//   `
+//   document.getElementById("foodExample").append(foodElem)
+// })
 
 
