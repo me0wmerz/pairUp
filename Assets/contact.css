@@ -17,12 +17,12 @@ section {
     height: 60px;
 }
 
-/* header {
+header {
     display: block;
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
-} */
+}
 
 .column {
     padding: 6px;
@@ -46,3 +46,8 @@ h2 {
     font-family: 'Raleway', sans-serif;
 }
 
+/* @media screen and (max-width: 1130px) {
+    .column {
+        min-width: 80vw;
+    }
+} */
