@@ -5,7 +5,6 @@ axios.get(`https://www.thecocktaildb.com/api/json/v1/1/random.php`)
     const drinkInfo = res.data.drinks[0]
     document.getElementById('drinkName').innerHTML = `
       <h2>${drinkInfo.strDrink}</h2>
-      <button id="drinkSave" class="button is-primary is-rounded "> Save </button>
       `
     document.getElementById('drinkImg').innerHTML =
       `
