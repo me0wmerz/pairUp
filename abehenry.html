@@ -5,12 +5,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Pair Up</title>
   <link rel="stylesheet" href="./assets/reset.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <link rel="stylesheet" href="recipe.css">
+  <link rel="icon" type="image/x-icon" href="assets/img/Pair_Up_Icon.png">
 </head>
 
 <body>
@@ -23,7 +24,7 @@
           <div class="container">
             <div class="navbar-brand">
               <a class="navbar-item">
-                <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo">
+                
               </a>
               <span class="navbar-burger" data-target="navbarMenuHeroA">
                 <span></span>
@@ -33,11 +34,11 @@
             </div>
             <div id="navbarMenuHeroA" class="navbar-menu">
               <div class="navbar-end">
-                <a class="navbar-item is-active">
+                <a class="navbar-item is-active" href="index.html">
                   Home
                 </a>
-                <a class="navbar-item">
-                  Saved Recipies
+                <a class="navbar-item" href="savedRecipes.html">
+                  Saved Recipes
                 </a>
                 <a class="navbar-item">
                   Contact Us
@@ -56,7 +57,7 @@
             Pair Up
           </p>
           <p class="subtitle size">
-            See below for your amazing recipie!
+            See below for your amazing recipe!
           </p>
         </div>
       </div>
@@ -73,10 +74,10 @@
           <div class="block">
             <div class="field is-grouped">
               <div class="control is-expanded">
-                <input class="input" type="text" placeholder="Search for other recipes" id="userInput">
+                <input id="userInput" class="input" type="text" placeholder="Enter your desired ingredients to search for a recipe">
               </div>
               <div class="control">
-                <button class="button is-primary"><i class="fas fa-search" id="search"></i></button>
+                <button id="search" class="button is-primary"><i class="fas fa-search"></i></button>
               </div>
             </div>
           </div>
@@ -94,7 +95,7 @@
                   <tr>
                     <th>
                       <i class="fas fa-random"></i>
-                      Click Below for More Recipies
+                      Click Below for More Recipes
                     </th>
                   </tr>
                 </thead>
@@ -102,36 +103,36 @@
                 <tbody id ="itemList">
                   <tr>
                     <td>
-                      <button class="button is-white moreRecipes" id="9">
-                        Steak Fries
+                      <button class="button is-white ">
+                        Item 1
                       </button>
                     </td>
                   </tr>
                   <tr>
                     <td>
                       <button class="button is-white">
-                        Ramen
+                        Item 2
                       </button>
                     </td>
                   </tr>
                   <tr>
                     <td>
                       <button class="button is-white">
-                        Pizza
+                        Item 3
                       </button>
                     </td>
                   </tr>
                   <tr>
                     <td>
                       <button class="button is-white">
-                        Hamburgar
+                        Item 4
                       </button>
                     </td>
                   </tr>
                   <tr>
                     <td>
                       <button class="button is-white">
-                        Spagetti
+                        Item 5
                       </button>
                     </td>
                   </tr>
@@ -147,22 +148,17 @@
             <div class="mx-1 column is-8">
 <!-- Food Image with Info Card -->
               <div class="columns card">
-                  <div class="column" id="recipeImg">
-                    <img
-                      src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80"
-                      alt="RecipieImg">
+                  <div id="foodPic" class="column">
+                    
                   </div>
                   <div class="column">
-                    <h3>
-                      Steak Fries
+                    <h3 id="foodName">
+                      
                     </h3>
-                    <p>Total Time: 24hrs</p>
-                    <p>Makes 10000 Serving Size</p>
+                    <p id="totalTime"></p>
+                    <p id="servings"></p>
                     <br>
-                    <p>These incredibly crispy, thick cut, oven baked steak fries are seasoned to perfection with steak
-                      seasoning for
-                      maximum
-                      flavor in every bite!</p>
+                    <p style=line-height:0% id="summary"></p>
 
                   </div>
 
@@ -170,65 +166,17 @@
 <!-- Instruction Card -->
               <div class="mt-4 columns card">
                 <div class="content p-4">
-                  <h3>
-                    Instructions:
-                  </h3>
-                  <p>
-                    Preheat oven to 400 degrees.
-                    Combine oil, paprika, cumin, salt, and pepper in a large bowl.
-                    Place potato wedges in the bowl and coat with spices.
-                    Transfer potato wedges to a large ungreased baking sheet (do not overcrowd).
-                    Bake until the potato wedges are golden and crisp (about 40 minutes). Serve immediately!
-                  </p>
-                  <p>
-                    Preheat oven to 400 degrees.
-                    Combine oil, paprika, cumin, salt, and pepper in a large bowl.
-                    Place potato wedges in the bowl and coat with spices.
-                    Transfer potato wedges to a large ungreased baking sheet (do not overcrowd).
-                    Bake until the potato wedges are golden and crisp (about 40 minutes). Serve immediately!
-                  </p>
-                  <p>
-                    Preheat oven to 400 degrees.
-                    Combine oil, paprika, cumin, salt, and pepper in a large bowl.
-                    Place potato wedges in the bowl and coat with spices.
-                    Transfer potato wedges to a large ungreased baking sheet (do not overcrowd).
-                    Bake until the potato wedges are golden and crisp (about 40 minutes). Serve immediately!
-                  </p>
-                  <p>
-                    Preheat oven to 400 degrees.
-                    Combine oil, paprika, cumin, salt, and pepper in a large bowl.
-                    Place potato wedges in the bowl and coat with spices.
-                    Transfer potato wedges to a large ungreased baking sheet (do not overcrowd).
-                    Bake until the potato wedges are golden and crisp (about 40 minutes). Serve immediately!
-                  </p>
-                  <p>
-                    Preheat oven to 400 degrees.
-                    Combine oil, paprika, cumin, salt, and pepper in a large bowl.
-                    Place potato wedges in the bowl and coat with spices.
-                    Transfer potato wedges to a large ungreased baking sheet (do not overcrowd).
-                    Bake until the potato wedges are golden and crisp (about 40 minutes). Serve immediately!
-                  </p>
-
-
-                  <h3>
-                    INGREDIENTS:
-                  </h3>
-                  <p>
-                    3
-                    tablespoons olive oil
-                    1
-                    teaspoon paprika
-                    1
-                    teaspoon ground cumin
-                    1
-                    teaspoon salt
-                    1⁄2
-                    teaspoon black pepper
-                    4 -6
-                    potatoes, cut into wedges
+                  <div id="ingredients">
+                    <h3>
+                      Ingredients:
+                    </h3>
+                  </div>
+                  <h3>Instructions:</h3>
+                  <p id="foodInstructions">
+                    Placeholder
                   </p>
                   <br>
-                  <button class="button is-primary is-rounded "> Save </button>
+                  
                 </div>
               </div>
             </div>
@@ -236,15 +184,15 @@
             <div class="mx-1 column is-4">
               <div class="columns card">
                 <div class="p-4">
-                  <h1>Calories and stuff</h1>
-                  <p>Calories 365</p>
-                  <p>% Daily Value*</p>
-                  <p> Total Fat 17 g 26%</p>
-                  <p>Saturated fat 2.7 g 13% </p>
-                  <p> Trans fat regulation 0.1 g</p>
-                  <p> Cholesterol 0 mg 0%</p>
-                  <p> Sodium 246 mg 10%</p>
-                  <p> Potassium 677 mg 19%</p>
+                  <h3>Nutritional Information</h3>
+                  <p id="calories">Calories:</p>
+                  <p id="fat">Fat: </p>
+                  <p id="carbs">Carbs: </p>
+                  <p id="protein">Proteins: </p>
+                  <p id="sodium">Sodium: </p>
+                  <p id="sugar">Sugar: </p>
+                  <p id="cholesterol">Cholesterol:</p>
+                  <p id="fiber">Fiber: </p>
                 </div>
               </div>
 <!-- drink tab -->
@@ -253,28 +201,25 @@
                   <div class="card mt-4">
                     <div class="card-image">
                       <figure class="image is-4by3" id="drinkImg">
-<!-- drink img -->      <img
-                          src="https://images.unsplash.com/photo-1544145945-f90425340c7e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80g"
-                          alt="Drinks">
+<!-- drink img -->     
                       </figure>
                     </div>
                     <div class="card-content">
                       <div class="media">
                         <div class="media-left">
                         </div>
-                        <div class="media-content">
-                          <p class="subtitle is-6">Complimentary Drink: </p>
-                          <p class="title is-4" id="drinkName">Margraita </p>
-                          <div class="content" id="instructions">
-                            A margarita is a cocktail consisting of tequila, orange liqueur, and lime juice often served
-                            with salt on
-                            the rim of the
-                            glass. The drink is served shaken with ice, blended with ice, or without ice.
+                        <class class="media-content">
+                          <p class="subtitle is-6">Complementary Drink: </p>
+                          <div class="title is-4" id="drinkName"></div>
+                          <div class="cocktailIngredient" id="cocktailIngredient"></div>
+                          <br>
+                          <div class="drinkInstructions" id="drinkInstructions">
+                            </class>
                           </div>
                         </div>
                       </div>
 
-                      <button class="button is-primary is-rounded "> Save </button>
+                      <!-- <button id="drinkSave" class="button is-primary is-rounded "> Save </button> -->
                     </div>
                   </div>
                 </div>
@@ -284,7 +229,7 @@
         </div>
       </div>
       <div class="columns has-background-primary">
-        <h1>youtube video</h1>
+        <!-- <h1>youtube video</h1> -->
       </div>
     </div>
   </div>
@@ -292,6 +237,9 @@
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="drinks.js"></script>
   <script src="food.js"></script>
+  <script src="recipe.js"></script>
+ 
+  
 </body>
 
 </html>
