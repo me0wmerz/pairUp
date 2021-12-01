@@ -19,8 +19,8 @@
   <div class="block">
     <section class="hero is-medium heroImg ">
       <!-- Hero head: will stick at the top -->
-      <div class="hero-head has-background-light is-transparent">
-        <nav class="navbar">
+      <div class="hero-head">
+        <nav class="navbar is-primary">
           <div class="container">
             <div class="navbar-brand">
               <a class="navbar-item">
@@ -34,16 +34,19 @@
             </div>
             <div id="navbarMenuHeroA" class="navbar-menu">
               <div class="navbar-end">
-                <a class="navbar-item is-active" href="index.html">
+                <a class="navbar-item " aria-current="page" href="./index.html">
                   Home
                 </a>
-                <a class="navbar-item" href="savedRecipes.html">
-                  Saved Recipes
+                <a class="navbar-item" href="abehenry.html">
+                  Recipes
                 </a>
-                <a class="navbar-item">
+               <a class="navbar-item" href="./savedRecipes.html">
+                  Saved recipes
+                </a>
+               <a class="navbar-item" href="./contact.html">
                   Contact Us
                 </a>
-
+                </span>
               </div>
             </div>
           </div>
@@ -158,7 +161,7 @@
                     <p id="totalTime"></p>
                     <p id="servings"></p>
                     <br>
-                    <p style=line-height:0% id="summary"></p>
+                    <p style="line-height: 0%" id="summary"></p>
 
                   </div>
 
@@ -233,13 +236,14 @@
       </div>
     </div>
   </div>
+  
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="drinks.js"></script>
   <script src="food.js"></script>
+  <script src="Assets/drinks.js"></script>
   <script src="recipe.js"></script>
- 
-  
+  <script src="Assets/script.js"></script>
 </body>
 
 </html>

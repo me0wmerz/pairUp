@@ -30,6 +30,11 @@ body {
   color: #A5BE00;
 }
 
+/* <<<<<<< HEAD:Assets/recipe.css */
+.hero-head {
+  font-family: 'Raleway', sans-serif;
+}
+/* ======= */
 #summary p {
   line-height: 0%;
 }
