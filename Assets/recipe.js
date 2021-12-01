@@ -100,8 +100,8 @@ document.getElementById("search").addEventListener("click", event => {
   ingredientsEl = document.getElementById("userInput").value
   loadUserFood(foodIndex, ingredientsEl)
   loadSideBar(ingredientsEl)
-  let hiddenEl = document.getElementById("hidden")
-  hiddenEl.classList.remove("is-hidden")
+//   let hiddenEl = document.getElementById("hidden")
+//   hiddenEl.classList.remove("is-hidden")
 
 })
 
