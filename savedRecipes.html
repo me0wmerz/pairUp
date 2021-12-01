@@ -1,36 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <link rel="stylesheet" href="reset.css" <meta charset="UTF-8">
+  <link rel="stylesheet" href="./assets/reset.css" <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Saved Recipies</title>
+  <title>Pair Up - Saved Recipes</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <link rel="icon" type="image/x-icon" href="assets/img/Pair_Up_Icon.png">
-    <link
-      href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Open+Sans:ital,wght@1,300&family=Raleway:wght@300&display=swap"
-      rel="stylesheet">
-    
 
-  <link rel="stylesheet" href="Assets/savedStyle.css">
-
+  <link rel="stylesheet" href="./assets/savedStyle.css">
+  <link rel="icon" type="image/x-icon" href="assets/img/Pair_Up_Icon.png">
 </head>
+<body >
 
-<body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
-  <section class="hero is-fullheight ">
+  <section class="hero is-fullheight "> 
     <!-- Hero head: will stick at the top -->
     <div class="hero-head">
-      <header class="navbar is-primary">
+      <header class="navbar">
         <div class="container">
           <div class="navbar-brand">
             <a class="navbar-item">
-              <img src="" alt="">
+             
             </a>
             <span class="navbar-burger" data-target="navbarMenuHeroC">
               <span></span>
@@ -40,7 +33,7 @@
           </div>
           <div id="navbarMenuHeroC" class="navbar-menu">
             <div class="navbar-end">
-              <a class="navbar-item" href="./index.html">
+              <a class="navbar-item is-active">
                 Home
               </a>
               <a class="navbar-item" href="./abehenry.html">
@@ -49,7 +42,7 @@
               <a class="navbar-item" aria-current="page" href="./savedRecipes.html">
                 Saved Recipe
               </a>
-              <a class="navbar-item" href="./contact.html">
+              <a class="navbar-item">
                 Contact Us
               </a>
             </div>
@@ -60,6 +53,14 @@
     <br>
     <br>
     <!-- Hero content: will be in the middle -->
+   
+      <div class="container has-text-centered">
+        <p class="title">
+         Your Saved Recipes
+        </p>
+        <p class="subtitle">
+          Check out all the saved recipes you haved added to your collection below.  
+        </p>
 
   <div class="container has-text-centered">
     <p class="title">
@@ -79,6 +80,6 @@
 
 <script src="savedRecipe.js"></script>
 
+  
 </body>
-
 </html>
