@@ -8,7 +8,11 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Open+Sans:ital,wght@1,300&family=Raleway:wght@300&display=swap"
+      rel="stylesheet">
   <link rel="stylesheet" href="./assets/savedStyle.css">
   <link rel="icon" type="image/x-icon" href="assets/img/Pair_Up_Icon.png">
 </head>
@@ -33,13 +37,16 @@
           </div>
           <div id="navbarMenuHeroC" class="navbar-menu">
             <div class="navbar-end">
-              <a class="navbar-item is-active">
+              <a class="navbar-item is-active" href="index.html">
                 Home
               </a>
-              <a class="navbar-item">
-                Saved Recipes
+              <a class="navbar-item" href="./abehenry.html">
+                Recipe
               </a>
-              <a class="navbar-item">
+              <a class="navbar-item" aria-current="page" href="./savedRecipes.html">
+                Saved Recipe
+              </a>
+              <a class="navbar-item" href="./contact.html">
                 Contact Us
               </a>
             </div>
@@ -49,24 +56,25 @@
     </div>
     <br>
     <br>
-    <!-- Hero content: will be in the middle -->
-   
-      <div class="container has-text-centered">
-        <p class="title">
-         Your Saved Recipes
-        </p>
-        <p class="subtitle">
-          Check out all the saved recipes you haved added to your collection below.  
-        </p>
 
-
-<ul id="foodExample" class="list-group">
-
-
-  </ul>
-</div>
+  <div class="container has-text-centered">
+    <p class="title">
+      Your Saved Recipes
+    </p>
+    <p class="subtitle">
+      Check out all the saved recipes you haved added to your collection below.
+    </p>
+  
+  
+    <ul id="foodExample" class="list-group">
+  
+  
+    </ul>
+  </div>
+  
 <script src="Assets/savedRecipe.js"></script>
-
+<script src="savedRecipe.js"></script>
+<script src="Assets/script.js"></script>
 
   
 </body>
