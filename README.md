@@ -1,3 +1,0 @@
-# nftProject
-
-test
