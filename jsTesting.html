@@ -40,8 +40,13 @@
     axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=721aa72fafd34a0788bd54bc3d53543c&instructionsRequired=true&addRecipeInformation=true&addRecipeNutrition=true&includeIngredients=${userIngredients}=10`)
       .then(res => {
         console.log(res)
+        console.log("Hellooooooo")
+        let food = res.data
+        console.log(food)
         for (let indexRecipe = 0; indexRecipe < 9; indexRecipe++) {
-          let foodInfo = res.data.results[indexRecipe]
+          let foodInfo = food.results[indexRecipe]
+          console.log("below me is the food Info stuff")
+          console.log(foodInfo)
           console.log(foodInfo.title)
           console.log(foodInfo.image)
           console.log(foodInfo.summary)

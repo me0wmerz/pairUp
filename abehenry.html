@@ -18,7 +18,7 @@
   <div class="block">
     <section class="hero is-medium heroImg ">
       <!-- Hero head: will stick at the top -->
-      <div class="hero-head">
+      <div class="hero-head has-background-light is-transparent">
         <nav class="navbar">
           <div class="container">
             <div class="navbar-brand">
@@ -73,10 +73,10 @@
           <div class="block">
             <div class="field is-grouped">
               <div class="control is-expanded">
-                <input class="input" type="text" placeholder="Search for other recipes">
+                <input class="input" type="text" placeholder="Search for other recipes" id="userInput">
               </div>
               <div class="control">
-                <button class="button is-primary"><i class="fas fa-search"></i></button>
+                <button class="button is-primary"><i class="fas fa-search" id="search"></i></button>
               </div>
             </div>
           </div>
@@ -99,10 +99,10 @@
                   </tr>
                 </thead>
                 <!-- To make new Suggestions -->
-                <tbody >
+                <tbody id ="itemList">
                   <tr>
                     <td>
-                      <button class="button is-white ">
+                      <button class="button is-white moreRecipes" id="9">
                         Steak Fries
                       </button>
                     </td>
@@ -147,7 +147,7 @@
             <div class="mx-1 column is-8">
 <!-- Food Image with Info Card -->
               <div class="columns card">
-                  <div class="column">
+                  <div class="column" id="recipeImg">
                     <img
                       src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80"
                       alt="RecipieImg">
@@ -291,6 +291,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="drinks.js"></script>
+  <script src="food.js"></script>
 </body>
 
 </html>
