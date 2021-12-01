@@ -30,11 +30,11 @@ body {
   color: #A5BE00;
 }
 
-<<<<<<< HEAD:Assets/recipe.css
+/* <<<<<<< HEAD:Assets/recipe.css */
 .hero-head {
   font-family: 'Raleway', sans-serif;
 }
-=======
+/* ======= */
 #summary p {
   line-height: 0%;
 }
@@ -42,8 +42,3 @@ body {
 #ingredients p {
   line-height: 0%;
 }
-
-#foodName h2 {
-    
-}
->>>>>>> 1dfa43936e6831c7c65b3e3f2f038dfe61f212b5:recipe.css
