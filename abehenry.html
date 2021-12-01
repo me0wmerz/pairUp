@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-  <link rel="stylesheet" href="recipe.css">
+  <link rel="stylesheet" href="Assets/recipe.css">
   <link rel="icon" type="image/x-icon" href="assets/img/Pair_Up_Icon.png">
 </head>
 
@@ -34,19 +34,20 @@
             </div>
             <div id="navbarMenuHeroA" class="navbar-menu">
               <div class="navbar-end">
-                <a class="navbar-item " aria-current="page" href="./index.html">
-                  Home
-                </a>
-                <a class="navbar-item" href="abehenry.html">
-                  Recipes
-                </a>
-               <a class="navbar-item" href="./savedRecipes.html">
-                  Saved recipes
-                </a>
-               <a class="navbar-item" href="./contact.html">
-                  Contact Us
-                </a>
-                </span>
+                          <div class="navbar-end">
+                            <a class="navbar-item" href="./index.html">
+                              Home
+                            </a>
+                            <a class="navbar-item" href="./abehenry.html">
+                              Recipe
+                            </a>
+                            <a class="navbar-item" aria-current="page" href="./savedRecipes.html">
+                              Saved Recipe
+                            </a>
+                            <a class="navbar-item" href="./contact.html">
+                              Contact Us
+                            </a>
+                          </div>
               </div>
             </div>
           </div>
@@ -103,7 +104,7 @@
                   </tr>
                 </thead>
                 <!-- To make new Suggestions -->
-                <tbody >
+                <tbody id ="itemList">
                   <tr>
                     <td>
                       <button class="button is-white ">
@@ -161,7 +162,7 @@
                     <p id="totalTime"></p>
                     <p id="servings"></p>
                     <br>
-                    <p style="line-height: 0%" id="summary"></p>
+                    <p id="summary"></p>
 
                   </div>
 
@@ -221,8 +222,7 @@
                           </div>
                         </div>
                       </div>
-
-                      <!-- <button id="drinkSave" class="button is-primary is-rounded "> Save </button> -->
+                      <button class="button is-primary is-rounded savedDrink"> Save </button>
                     </div>
                   </div>
                 </div>
@@ -239,7 +239,10 @@
   
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="drinks.js"></script>
+  <script src="food.js"></script>
   <script src="Assets/drinks.js"></script>
+  <script src="assets/recipe.js"></script>
   <script src="recipe.js"></script>
   <script src="Assets/script.js"></script>
 </body>
